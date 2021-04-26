@@ -8,7 +8,7 @@ import AngleRight from '../../assets/images/angle-right.svg'
 export default function DigitalExperience() {
     return (
         <>
-            <section className="digital-experience-section spy">
+            <section className="digital-experience-section spy-100">
                 <Container>
                     <Row>
                         <Col md={12} >
@@ -17,7 +17,7 @@ export default function DigitalExperience() {
                                     <h1 className="sc-title">We create next-level digital experiences</h1>
                                 </div>
                                 <div className="sc-view-all-box">
-                                    <a className="sc-view-all" href="#">VIEW OUR SERVICES</a>
+                                    <a className="sc-view-all" href="#demo">VIEW OUR SERVICES</a>
                                     <span>
                                         <img src={AngleRight} alt="angle-right" />
                                     </span>
