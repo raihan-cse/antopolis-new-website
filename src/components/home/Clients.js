@@ -1,7 +1,7 @@
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import AngleRight from '../../assets/images/angle-right.svg'
-import OwlCarousel from 'react-owl-carousel'
+import OwlCarousel from 'react-owl-carousel-rtl'
 import 'owl.carousel/dist/assets/owl.carousel.css'
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 
@@ -122,12 +122,14 @@ export default function Clients() {
                     </OwlCarousel>
                     <OwlCarousel className="clients-slide-two" 
                     items={10} 
-                    loop margin={30}
+                    loop={true}
+                    margin={30}
                     autoplay={true}
                     smartSpeed={1000}
                     autoplayTimeout={3000}
                     autoplayHoverPause={true}
-                    dots={false} >
+                    dots={false}
+                    rtl={true}>
                         <div className="item">
                             <div className="clients-logo">
                                 <a href="#demo" className="text-decoration-none text-reset">
