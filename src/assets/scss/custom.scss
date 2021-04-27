@@ -47,6 +47,22 @@ ol, ul, dl {
     transition: all 0.3s ease-in-out;
 }
 
+@mixin view-all () {
+    a {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 24px;
+        text-transform: uppercase;
+        color: $black;
+        img {
+            width: 28px;
+            height: 20px;
+            margin-left: 16px;
+            vertical-align: text-top;
+        }
+    }
+}
+
 
 // digital experience section start
 .section-title-wrapper {
@@ -104,6 +120,30 @@ ol, ul, dl {
 }
 
 
+// protfolio or tab content section start
+.protfolio-section {
+    position: relative;
+    overflow: hidden;
+    .tab-wrapper {
+        height: 500px;
+        position: relative;
+    }
+
+    .rotate {
+        position: absolute;
+        top: 229px;
+        left: -229px;
+        right: 0;
+        transform: rotate(-90deg);
+        width: 498px;
+        border-bottom: 1px solid;
+        &.nav {
+            justify-content: center;
+        }
+    }
+    
+}
+
 // clients section start
 .home-clients-section {
     .section-title-wrapper {
@@ -124,6 +164,52 @@ ol, ul, dl {
         &:hover {
             img {
                 filter: grayscale(0);
+            }
+        }
+    }
+}
+
+
+// content component start
+.profile-content-section {
+    padding-left: 48px;
+    .profile-content-inner {
+        height: 100%;
+        .profile-left-box {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .profile-left-contet {
+                width: 100%;
+                h3 {
+                    font-size: 32px;
+                    font-weight: 700;
+                    line-height: 44px;
+                    color: $black;
+                    padding-bottom: 1rem;
+                }
+                ul > li {
+                    display: flex;
+                    .icon {
+                        flex-basis: 32px;
+                    }
+                    &:not(:last-child) {
+                        margin-bottom: 24px;
+                    }
+                    .text {
+                        padding-left: .75rem;
+                        p {
+                            font-size: 20px;
+                            font-weight: 500;
+                            line-height: 32px;
+                            color: $black-light;
+                        }
+                    }
+                }
+            }
+
+            .full-profile {
+                @include view-all();
             }
         }
     }
@@ -211,11 +297,6 @@ ol, ul, dl {
                     margin-left: 16px;
                     vertical-align: text-top;
                 }
-                // span {
-                //     vertical-align: top;
-                //     padding-left: 16px;
-                    
-                // }
             }
         }
     }
