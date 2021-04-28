@@ -26,6 +26,10 @@ ol, ul, dl {
     padding-left: 0;
 }
 
+.btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, .show > .btn-primary.dropdown-toggle:focus {
+    box-shadow: none;
+}
+
 
 // common classes
 .spt-100, .spy-100 {
@@ -139,60 +143,48 @@ ol, ul, dl {
     position: relative;
     overflow: hidden;
     .tab-wrapper {
-        height: 500px;
+        // height: 500px;
         position: relative;
     }
 
     .rotate {
         position: absolute;
         top: 229px;
-        left: -229px;
+        left: -248px;
         right: 0;
         transform: rotate(-90deg);
-        width: 498px;
-        border-bottom: 1px solid;
+        width: 554px;
+        border-bottom: 1px solid $black-light;
         &.nav {
             justify-content: center;
         }
     }
+    .nav-tabs .nav-link {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 32px;
+        color: $black-light;
+    }
+    .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+        color: $black;
+        background-color: transparent;
+        border: none;
+        border-bottom: 2px solid $black;
+    }
     
 }
 
-// clients section start
-.home-clients-section {
-    .section-title-wrapper {
-        .sc-title-box {
-            flex-basis: 70%;
-        }
-    }
-    .clients-slide-two {
-        padding: 48px 0;
-    }
-    .clients-logo {
-        a {
-            img {
-                filter: grayscale(1);
-                width: 100%;
-            }
-        }
-        &:hover {
-            img {
-                filter: grayscale(0);
-            }
-        }
-    }
-}
-
-
 // content component start
 .profile-content-section {
-    padding-left: 48px;
+    padding-left: 80px;
     .profile-content-inner {
         height: 100%;
         .profile-left-box {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            height: 100%;
+            padding: 0 0 24px;
             .profile-left-contet {
                 width: 100%;
                 h3 {
@@ -200,7 +192,7 @@ ol, ul, dl {
                     font-weight: 700;
                     line-height: 44px;
                     color: $black;
-                    padding-bottom: 1rem;
+                    padding-bottom: 1.5rem;
                 }
                 ul > li {
                     display: flex;
@@ -224,6 +216,74 @@ ol, ul, dl {
 
             .full-profile {
                 @include view-all();
+            }
+        }
+        .profile-right-box {
+            .slick-slider-wrapper {
+                .slick-slide {
+                    position: relative;
+                    .slick-slide-image {
+                        position: relative;
+                    }
+                    .web-visit-box {
+                        position: absolute;
+                        top: 105px;
+                        right: 105px;
+                        background-color: black;
+                        width: 270px;
+                        border-radius: 50px;
+                        text-align: center;
+                        height: 70px;
+                        line-height: 70px;
+                        @include view-all();
+                        a {
+                            color: $white;
+                            img {
+                                display: inline-block;
+                            }
+                        }
+                    }
+                }
+                .play-push-box {
+                    position: absolute;
+                    top: 105px;
+                    right: 400px;
+                    width: 70px;
+                    height: 70px;
+                    .ps-btn {
+                        width: 70px;
+                        height: 70px;
+                        border-radius: 50%;
+                        border: 2px solid $black-light;
+                        background-color: transparent;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// clients section start
+.home-clients-section {
+    .section-title-wrapper {
+        .sc-title-box {
+            flex-basis: 70%;
+        }
+    }
+    .clients-slide-two {
+        padding: 48px 0;
+    }
+    .clients-logo {
+        a {
+            img {
+                filter: grayscale(1);
+                width: 100%;
+            }
+        }
+        &:hover {
+            img {
+                filter: grayscale(0);
             }
         }
     }

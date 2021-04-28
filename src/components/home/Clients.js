@@ -3,7 +3,7 @@ import { Col, Container, Row } from 'react-bootstrap'
 import AngleRight from '../../assets/images/angle-right.svg'
 import OwlCarousel from 'react-owl-carousel-rtl'
 import 'owl.carousel/dist/assets/owl.carousel.css'
-import 'owl.carousel/dist/assets/owl.theme.default.css';
+import 'owl.carousel/dist/assets/owl.theme.default.css'
 
 export default function Clients() {
     return (
