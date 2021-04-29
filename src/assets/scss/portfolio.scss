@@ -1,0 +1,192 @@
+@import "colors";
+@import "buttons";
+
+
+.slick-arrow {
+    &.slick-prev {
+        left: 24px;
+    }
+    &.slick-next {
+        right: 24px;
+    }
+    
+}
+.slick-prev::before {
+    content: url(../images/left-arrow.svg);
+}
+.slick-next::before {
+    content: url(../images/right-arrow.svg);
+}
+.slick-prev, .slick-next {
+    z-index: 1;
+    width: 48px;
+    height: 48px;
+    border: 2px solid $off-white;
+    border-radius: 50%;
+}
+.slick-prev::before, .slick-next::before {
+
+}
+.slick-slider-wrapper {
+    position: relative;
+    .slick-thumbnail-wrapper {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: white;
+        margin: 0 100px;
+        border-radius: 4px 4px 0 0;
+        .slick-slide {
+            padding: 1rem .5rem;
+            .slick-slide {
+                padding: 0 0;
+                overflow: hidden;
+                img {
+                    border-radius: 4px;
+                    cursor: pointer;
+                }
+            }
+            &.slick-current {
+                border-top: 2px solid #181818;
+            }  
+        }
+    }
+}
+
+
+
+
+// protfolio or tab content section start
+.protfolio-section {
+    position: relative;
+    overflow: hidden;
+    .tab-wrapper {
+        // height: 500px;
+        position: relative;
+    }
+
+    .rotate {
+        position: absolute;
+        top: 229px;
+        left: -248px;
+        right: 0;
+        transform: rotate(-90deg);
+        width: 554px;
+        border-bottom: 1px solid $black-light;
+        &.nav {
+            justify-content: center;
+        }
+    }
+    .nav-tabs .nav-link {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 32px;
+        color: $black-light;
+    }
+    .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+        color: $black;
+        background-color: transparent;
+        border: none;
+        border-bottom: 2px solid $black;
+    }
+    
+}
+
+// content component start
+.profile-content-section {
+    &.bg-black {
+        background-color: rgba(37, 37, 37, 1);
+        .profile-left-contet h3, .profile-left-contet ul > li .text p {
+            color: $white;
+        }
+    }
+}
+
+.profile-content-section {
+    padding-left: 80px;
+    // min-height: 761px;
+    .profile-content-inner {
+        height: 100%;
+        .profile-left-box {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            padding: 0 0 24px;
+            .profile-left-contet {
+                width: 100%;
+                h3 {
+                    font-size: 32px;
+                    font-weight: 700;
+                    line-height: 44px;
+                    padding-bottom: 1.5rem;
+                }
+                ul > li {
+                    display: flex;
+                    .icon {
+                        flex-basis: 32px;
+                    }
+                    &:not(:last-child) {
+                        margin-bottom: 24px;
+                    }
+                    .text {
+                        padding-left: .75rem;
+                        p {
+                            font-size: 20px;
+                            font-weight: 500;
+                            line-height: 32px;
+                        }
+                    }
+                }
+            }
+
+            .full-profile {
+                @include view-all();
+            }
+        }
+        .profile-right-box {
+            .slick-slider-wrapper {
+                .slick-slide {
+                    position: relative;
+                    .slick-slide-image {
+                        position: relative;
+                        width: 100%;
+                    }
+                    .web-visit-box {
+                        position: absolute;
+                        top: 105px;
+                        right: 105px;
+                        background-color: black;
+                        width: 270px;
+                        border-radius: 50px;
+                        text-align: center;
+                        height: 70px;
+                        line-height: 70px;
+                        @include view-all();
+                        a {
+                            color: $white;
+                            img {
+                                display: inline-block;
+                            }
+                        }
+                    }
+                }
+                .play-push-box {
+                    position: absolute;
+                    top: 105px;
+                    right: 400px;
+                    width: 70px;
+                    height: 70px;
+                    .ps-btn {
+                        width: 70px;
+                        height: 70px;
+                        border-radius: 50%;
+                        border: 2px solid $black-light;
+                        background-color: transparent;
+                    }
+                }
+            }
+        }
+    }
+}

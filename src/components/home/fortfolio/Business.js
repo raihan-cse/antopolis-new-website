@@ -1,31 +1,18 @@
 import React, { useState, useEffect } from 'react'
 import { Button, Col, Container, Row } from 'react-bootstrap'
-// import ImageGallery from 'react-image-gallery';
 import SlickSlider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
-import '../../../assets/scss/custom-slick.scss'
+import '../../../assets/scss/portfolio.scss'
 
 export default function Content() {
-    // const images = [
-    //     {
-    //       original: 'http://via.placeholder.com/1080x720',
-    //       thumbnail: 'http://via.placeholder.com/1080x720',
-    //       originalTitle: 'hello one',
-    //     },
-    //     {
-    //       original: 'http://via.placeholder.com/1080x720',
-    //       thumbnail: 'http://via.placeholder.com/1080x720'
-    //     },
-    //     {
-    //       original: 'http://via.placeholder.com/1080x720',
-    //       thumbnail: 'http://via.placeholder.com/1080x720'
-    //     }
-    //   ]
     const [nav1, setNav1] = useState(null);
     const [nav2, setNav2] = useState(null);
     const [slider1, setSlider1] = useState(null);
     const [slider2, setSlider2] = useState(null);
+
+    //play / pause button toggle
+    const [push, setPush] = useState(true)
 
     useEffect(() => {
 
@@ -34,21 +21,26 @@ export default function Content() {
 
     }, [slider1, slider2]);
 
+    const handlePush = () => {
+        setSlider1(slider1.slickPause())
+        setPush(false)
+    }
+    const handlePlay = () => {
+        setSlider1(slider1.slickPlay())
+        setPush(true)
+    }
+
     const settingsMain = {
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: true,
         fade: false,
-        // autoplay: true,
-        // asNavFor: '.slider-nav'
-        // asNavFor: nav1,
+        autoplay: true,
     };
 
     const settingsThumbs = {
         slidesToShow: 9,
         slidesToScroll: 1,
-        // asNavFor: '.slider-for',
-        // asNavFor: nav2,
         dots: false,
         centerMode: true,
         swipeToSlide: false,
@@ -58,63 +50,63 @@ export default function Content() {
     const slidesData = [
         {
             id: 1,
-            imgUrl: '/assets/img/media/media-white.png',
+            imgUrl: '/assets/img/media/media-black.png',
             title: 'repellendus id ullam',
             label: 'Dolorem officiis temporibus.',
             imgAlt: 'first'
         }, 
         {
             id: 2,
-            imgUrl: '/assets/img/media/media-black.png',
+            imgUrl: '/assets/img/media/media-white.png',
             title: 'excepturi consequatur est',
             label: 'Officia non provident dolor esse et neque.',
             imgAlt: 'second'
         }, 
         {
             id: 3,
-            imgUrl: '/assets/img/media/media-white.png',
+            imgUrl: '/assets/img/media/media-black.png',
             title: 'eius doloribus blanditiis',
             label: 'Ut recusandae vel vitae molestiae id soluta.',
             imgAlt: 'third'
         }, 
         {
             id: 4,
-            imgUrl: '/assets/img/media/media-black.png',
+            imgUrl: '/assets/img/media/media-white.png',
             title: 'nihil voluptates delectus',
             label: 'Qui vel consequatur recusandae illo repellendus.',
             imgAlt: 'fouth'
         }, 
         {
             id: 5,
-            imgUrl: '/assets/img/media/media-white.png',
+            imgUrl: '/assets/img/media/media-black.png',
             title: 'nemo dolorem necessitatibus',
             label: 'Placeat odit velit itaque voluptatem.',
             imgAlt: 'fifth'
         }, 
         {
             id: 6,
-            imgUrl: '/assets/img/media/media-black.png',
+            imgUrl: '/assets/img/media/media-white.png',
             title: 'dolorem quibusdam quasi',
             label: 'Adipisci officiis repudiandae.',
             imgAlt: 'sixth'
         },
         {
             id: 7,
-            imgUrl: '/assets/img/media/media-white.png',
+            imgUrl: '/assets/img/media/media-black.png',
             title: 'nemo dolorem necessitatibus',
             label: 'Placeat odit velit itaque voluptatem.',
             imgAlt: 'fifth'
         }, 
         {
             id: 8,
-            imgUrl: '/assets/img/media/media-black.png',
+            imgUrl: '/assets/img/media/media-white.png',
             title: 'dolorem quibusdam quasi',
             label: 'Adipisci officiis repudiandae.',
             imgAlt: 'sixth'
         },
         {
             id: 9,
-            imgUrl: '/assets/img/media/media-white.png',
+            imgUrl: '/assets/img/media/media-black.png',
             title: 'nemo dolorem necessitatibus',
             label: 'Placeat odit velit itaque voluptatem.',
             imgAlt: 'fifth'
@@ -214,12 +206,16 @@ export default function Content() {
                                             </SlickSlider>
                                         </div>
                                         <div className="play-push-box">
-                                            <Button className="ps-btn push">
-                                                <img src={process.env.PUBLIC_URL + '/assets/img/push.svg'} alt="btn-push" />
-                                            </Button>
-                                            <Button className="ps-btn play d-none">
-                                            <img src={process.env.PUBLIC_URL + '/assets/img/push.svg'} alt="btn-push" />
-                                            </Button>
+                                            {
+                                                push ?
+                                                    <Button onClick={handlePush} variant="none" className="ps-btn push">
+                                                        <img src={process.env.PUBLIC_URL + '/assets/img/push.svg'} alt="btn-push" />
+                                                    </Button>
+                                                    :
+                                                    <Button onClick={handlePlay} className="ps-btn play">
+                                                        <img src={process.env.PUBLIC_URL + '/assets/img/right-arrow.svg'} alt="btn-push" />
+                                                    </Button>
+                                            }
                                         </div>
                                     </div>
                                 </div>

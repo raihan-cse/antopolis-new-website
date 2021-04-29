@@ -1,31 +1,18 @@
 import React, { useState, useEffect } from 'react'
 import { Button, Col, Container, Row } from 'react-bootstrap'
-// import ImageGallery from 'react-image-gallery';
 import SlickSlider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
-import '../../../assets/scss/custom-slick.scss'
+import '../../../assets/scss/portfolio.scss'
 
 export default function Content() {
-    // const images = [
-    //     {
-    //       original: 'http://via.placeholder.com/1080x720',
-    //       thumbnail: 'http://via.placeholder.com/1080x720',
-    //       originalTitle: 'hello one',
-    //     },
-    //     {
-    //       original: 'http://via.placeholder.com/1080x720',
-    //       thumbnail: 'http://via.placeholder.com/1080x720'
-    //     },
-    //     {
-    //       original: 'http://via.placeholder.com/1080x720',
-    //       thumbnail: 'http://via.placeholder.com/1080x720'
-    //     }
-    //   ]
     const [nav1, setNav1] = useState(null);
     const [nav2, setNav2] = useState(null);
     const [slider1, setSlider1] = useState(null);
     const [slider2, setSlider2] = useState(null);
+
+    //play / pause button toggle
+    const [push, setPush] = useState(true)
 
     useEffect(() => {
 
@@ -34,21 +21,26 @@ export default function Content() {
 
     }, [slider1, slider2]);
 
+    const handlePush = () => {
+        setSlider1(slider1.slickPause())
+        setPush(false)
+    }
+    const handlePlay = () => {
+        setSlider1(slider1.slickPlay())
+        setPush(true)
+    }
+
     const settingsMain = {
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: true,
         fade: false,
-        // autoplay: true,
-        // asNavFor: '.slider-nav'
-        // asNavFor: nav1,
+        autoplay: true,
     };
 
     const settingsThumbs = {
         slidesToShow: 9,
         slidesToScroll: 1,
-        // asNavFor: '.slider-for',
-        // asNavFor: nav2,
         dots: false,
         centerMode: true,
         swipeToSlide: false,
@@ -165,12 +157,16 @@ export default function Content() {
                                             </SlickSlider>
                                         </div>
                                         <div className="play-push-box">
-                                            <Button className="ps-btn push">
-                                                <img src={process.env.PUBLIC_URL + '/assets/img/push.svg'} alt="btn-push" />
-                                            </Button>
-                                            <Button className="ps-btn play d-none">
-                                            <img src={process.env.PUBLIC_URL + '/assets/img/push.svg'} alt="btn-push" />
-                                            </Button>
+                                            {
+                                                push ?
+                                                    <Button onClick={handlePush} variant="none" className="ps-btn push">
+                                                        <img src={process.env.PUBLIC_URL + '/assets/img/push.svg'} alt="btn-push" />
+                                                    </Button>
+                                                    :
+                                                    <Button onClick={handlePlay} className="ps-btn play">
+                                                        <img src={process.env.PUBLIC_URL + '/assets/img/right-arrow.svg'} alt="btn-push" />
+                                                    </Button>
+                                            }
                                         </div>
                                     </div>
                                 </div>

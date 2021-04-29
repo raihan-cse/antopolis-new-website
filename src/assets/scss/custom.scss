@@ -1,7 +1,4 @@
-$black: #181818;
-$black-light: rgba($black, 0.7);
-$white: #ffffff;
-$bg-gray: #F8F8F8;
+@import "colors";
 
 
 // normalization
@@ -51,35 +48,6 @@ ol, ul, dl {
     transition: all 0.3s ease-in-out;
 }
 
-@mixin view-all () {
-    a {
-        font-size: 20px;
-        font-weight: 700;
-        line-height: 24px;
-        text-transform: uppercase;
-        color: $black;
-        vertical-align: middle;
-        position: relative;
-        // background-image: url('https://via.placeholder.com/500');
-        // background-image: url('../images/angle-right.svg');
-        // background-repeat: no-repeat;
-        // background-size: 28px;
-        // background-position: center 100px;
-        img {
-            width: 28px;
-            // height: 20px;
-            margin-left: 16px;
-            margin-top: -2px;
-            // vertical-align: top;
-        }
-        // &::before {
-        //     position: absolute;
-        //     content: url('../images/angle-right.svg');
-        //     top: 2px;
-        //     right: -42px;
-        // }
-    }
-}
 
 
 // digital experience section start
@@ -139,129 +107,136 @@ ol, ul, dl {
 
 
 // protfolio or tab content section start
-.protfolio-section {
-    position: relative;
-    overflow: hidden;
-    .tab-wrapper {
-        // height: 500px;
-        position: relative;
-    }
+// .protfolio-section {
+//     position: relative;
+//     overflow: hidden;
+//     .tab-wrapper {
+//         height: 500px;
+//         position: relative;
+//     }
 
-    .rotate {
-        position: absolute;
-        top: 229px;
-        left: -248px;
-        right: 0;
-        transform: rotate(-90deg);
-        width: 554px;
-        border-bottom: 1px solid $black-light;
-        &.nav {
-            justify-content: center;
-        }
-    }
-    .nav-tabs .nav-link {
-        font-size: 20px;
-        font-weight: 600;
-        line-height: 32px;
-        color: $black-light;
-    }
-    .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
-        color: $black;
-        background-color: transparent;
-        border: none;
-        border-bottom: 2px solid $black;
-    }
+//     .rotate {
+//         position: absolute;
+//         top: 229px;
+//         left: -248px;
+//         right: 0;
+//         transform: rotate(-90deg);
+//         width: 554px;
+//         border-bottom: 1px solid $black-light;
+//         &.nav {
+//             justify-content: center;
+//         }
+//     }
+//     .nav-tabs .nav-link {
+//         font-size: 20px;
+//         font-weight: 600;
+//         line-height: 32px;
+//         color: $black-light;
+//     }
+//     .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+//         color: $black;
+//         background-color: transparent;
+//         border: none;
+//         border-bottom: 2px solid $black;
+//     }
     
-}
+// }
 
 // content component start
-.profile-content-section {
-    padding-left: 80px;
-    .profile-content-inner {
-        height: 100%;
-        .profile-left-box {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            height: 100%;
-            padding: 0 0 24px;
-            .profile-left-contet {
-                width: 100%;
-                h3 {
-                    font-size: 32px;
-                    font-weight: 700;
-                    line-height: 44px;
-                    color: $black;
-                    padding-bottom: 1.5rem;
-                }
-                ul > li {
-                    display: flex;
-                    .icon {
-                        flex-basis: 32px;
-                    }
-                    &:not(:last-child) {
-                        margin-bottom: 24px;
-                    }
-                    .text {
-                        padding-left: .75rem;
-                        p {
-                            font-size: 20px;
-                            font-weight: 500;
-                            line-height: 32px;
-                            color: $black-light;
-                        }
-                    }
-                }
-            }
+// .profile-content-section {
+//     &.bg-black {
+//         background-color: rgba(37, 37, 37, 1);
+//         .profile-left-contet h3, .profile-left-contet ul > li .text p {
+//             color: $white;
+//         }
+//     }
+// }
+// .profile-content-section {
+//     padding-left: 80px;
+//     min-height: 761px;
+//     .profile-content-inner {
+//         height: 100%;
+//         .profile-left-box {
+//             display: flex;
+//             flex-direction: column;
+//             justify-content: space-between;
+//             height: 100%;
+//             padding: 0 0 24px;
+//             .profile-left-contet {
+//                 width: 100%;
+//                 h3 {
+//                     font-size: 32px;
+//                     font-weight: 700;
+//                     line-height: 44px;
+//                     padding-bottom: 1.5rem;
+//                 }
+//                 ul > li {
+//                     display: flex;
+//                     .icon {
+//                         flex-basis: 32px;
+//                     }
+//                     &:not(:last-child) {
+//                         margin-bottom: 24px;
+//                     }
+//                     .text {
+//                         padding-left: .75rem;
+//                         p {
+//                             font-size: 20px;
+//                             font-weight: 500;
+//                             line-height: 32px;
+//                         }
+//                     }
+//                 }
+//             }
 
-            .full-profile {
-                @include view-all();
-            }
-        }
-        .profile-right-box {
-            .slick-slider-wrapper {
-                .slick-slide {
-                    position: relative;
-                    .slick-slide-image {
-                        position: relative;
-                    }
-                    .web-visit-box {
-                        position: absolute;
-                        top: 105px;
-                        right: 105px;
-                        background-color: black;
-                        width: 270px;
-                        border-radius: 50px;
-                        text-align: center;
-                        height: 70px;
-                        line-height: 70px;
-                        @include view-all();
-                        a {
-                            color: $white;
-                            img {
-                                display: inline-block;
-                            }
-                        }
-                    }
-                }
-                .play-push-box {
-                    position: absolute;
-                    top: 105px;
-                    right: 400px;
-                    width: 70px;
-                    height: 70px;
-                    .ps-btn {
-                        width: 70px;
-                        height: 70px;
-                        border-radius: 50%;
-                        border: 2px solid $black-light;
-                        background-color: transparent;
-                    }
-                }
-            }
-        }
-    }
-}
+//             .full-profile {
+//                 @include view-all();
+//             }
+//         }
+//         .profile-right-box {
+//             .slick-slider-wrapper {
+//                 .slick-slide {
+//                     position: relative;
+//                     .slick-slide-image {
+//                         position: relative;
+//                     }
+//                     .web-visit-box {
+//                         position: absolute;
+//                         top: 105px;
+//                         right: 105px;
+//                         background-color: black;
+//                         width: 270px;
+//                         border-radius: 50px;
+//                         text-align: center;
+//                         height: 70px;
+//                         line-height: 70px;
+//                         @include view-all();
+//                         a {
+//                             color: $white;
+//                             img {
+//                                 display: inline-block;
+//                             }
+//                         }
+//                     }
+//                 }
+//                 .play-push-box {
+//                     position: absolute;
+//                     top: 105px;
+//                     right: 400px;
+//                     width: 70px;
+//                     height: 70px;
+//                     .ps-btn {
+//                         width: 70px;
+//                         height: 70px;
+//                         border-radius: 50%;
+//                         border: 2px solid $black-light;
+//                         background-color: transparent;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
 
 
 // clients section start
