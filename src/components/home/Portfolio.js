@@ -3,21 +3,20 @@ import { Tab, Tabs } from 'react-bootstrap'
 import Content from './fortfolio/Content'
 import Tech from './fortfolio/Tech'
 import Business from './fortfolio/Business'
-// import "react-image-gallery/styles/scss/image-gallery.scss";
 
 export default function Portfolio() {
     return (
         <>
             <section className="protfolio-section spb-100">
                 <div className="tab-wrapper">
-                    <Tabs className="rotate" defaultActiveKey="content" id="portfolio-tab">
-                        <Tab eventKey="content" title="Content">
+                    <Tabs className="rotate" defaultActiveKey="business" id="portfolio-tab">
+                        <Tab eventKey="content" title="Content" tabClassName="bgs-tab">
                             <Content />
                         </Tab>
-                        <Tab eventKey="tech" title="Tech">
+                        <Tab eventKey="tech" title="Tech" tabClassName="">
                             <Tech />
                         </Tab>
-                        <Tab eventKey="business" title="Business">
+                        <Tab eventKey="business" title="Business" tabClassName="bgs-tab">
                             <Business />
                         </Tab>
                     </Tabs>

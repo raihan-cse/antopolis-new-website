@@ -27,6 +27,14 @@ ol, ul, dl {
     box-shadow: none;
 }
 
+.nav-tabs .nav-link {
+    border: 0;
+}
+
+.nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
+    border-color: none;
+}
+
 
 // common classes
 .spt-100, .spy-100 {
