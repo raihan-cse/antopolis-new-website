@@ -2,7 +2,7 @@
 @import "buttons";
 
 .fade {
-    transition: opacity .7s ease-in-out;
+    transition: opacity 1s ease-in-out;
 }
 // protfolio or tab content section start
 .protfolio-section {
@@ -20,6 +20,7 @@
         transform: rotate(-90deg);
         width: 554px;
         border-bottom: 0;
+        z-index: 1;
         &.nav {
             justify-content: center;
         }

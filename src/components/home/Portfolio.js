@@ -8,7 +8,7 @@ export default function Portfolio() {
     const [adc, setAdc] = useState()
 
     const handleSelect = (eventKey) => {
-        if(eventKey=="tech") {
+        if(eventKey==="tech") {
             setAdc('ad')
         }
         else if(eventKey!=="tech") {
