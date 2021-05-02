@@ -128,7 +128,7 @@ export default function Content() {
                                 <ul>
                                     <li>
                                         <div className="icon">
-                                            <img className="img-fluid" src={process.env.PUBLIC_URL + '/assets/img/ui-ux-black.svg'} alt="" />
+                                            <img className="img-fluid" src={process.env.PUBLIC_URL + '/assets/img/ui-ux-white.svg'} alt="" />
                                         </div>
                                         <div className="text">
                                             <p>UI/UX Design</p>
@@ -136,7 +136,7 @@ export default function Content() {
                                     </li>
                                     <li>
                                         <div className="icon">
-                                            <img className="img-fluid" src={process.env.PUBLIC_URL + '/assets/img/websites-black.svg'} alt="" />
+                                            <img className="img-fluid" src={process.env.PUBLIC_URL + '/assets/img/websites-white.svg'} alt="" />
                                         </div>
                                         <div className="text">
                                             <p>Websites</p>
@@ -144,7 +144,7 @@ export default function Content() {
                                     </li>
                                     <li>
                                         <div className="icon">
-                                            <img className="img-fluid" src={process.env.PUBLIC_URL + '/assets/img/mobile-app-black.svg'} alt="" />
+                                            <img className="img-fluid" src={process.env.PUBLIC_URL + '/assets/img/mobile-app-white.svg'} alt="" />
                                         </div>
                                         <div className="text">
                                             <p>Mobile Apps</p>
@@ -152,7 +152,7 @@ export default function Content() {
                                     </li>
                                     <li>
                                         <div className="icon">
-                                            <img className="img-fluid" src={process.env.PUBLIC_URL + '/assets/img/software-black.svg'} alt="" />
+                                            <img className="img-fluid" src={process.env.PUBLIC_URL + '/assets/img/software-white.svg'} alt="" />
                                         </div>
                                         <div className="text">
                                             <p>Corporate Software</p>

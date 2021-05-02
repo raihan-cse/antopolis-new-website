@@ -36,6 +36,8 @@ export default function Content() {
         arrows: true,
         fade: false,
         autoplay: true,
+        autoplaySpeed: 5000,
+        speed: 2000,
     };
 
     const settingsThumbs = {
