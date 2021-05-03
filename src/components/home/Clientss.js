@@ -1,37 +1,13 @@
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
-import Slide from 'react-slick'
-import 'slick-carousel/slick/slick.css'
-import 'slick-carousel/slick/slick-theme.css'
 import AngleRight from '../../assets/images/angle-right.svg'
+import OwlCarousel from 'react-owl-carousel-rtl'
+// import $ from 'jquery'
+import 'owl.carousel/dist/assets/owl.carousel.css'
+import 'owl.carousel/dist/assets/owl.theme.default.css'
 
-export default function Clients() {
-    //settings for slide one
-    const ssOne = {
-        slidesToShow: 10,
-        slidesToScroll: 1,
-        arrows: false,
-        autoplay: true,
-        autoplaySpeed: 3000,
-        speed: 2000,
-    }
-    const ssTwo = {
-        slidesToShow: 10,
-        slidesToScroll: 1,
-        arrows: false,
-        autoplay: true,
-        rtl: true,
-        autoplaySpeed: 3000,
-        speed: 2000,
-    }
-    const ssThree = {
-        slidesToShow: 10,
-        slidesToScroll: 1,
-        arrows: false,
-        autoplay: true,
-        autoplaySpeed: 3000,
-        speed: 2000,
-    }
+
+export default function Clientss() {
     return (
         <>
             <section className="home-clients-section spb-100">
@@ -52,8 +28,15 @@ export default function Clients() {
                         </Col>
                     </Row>
                 </Container>
-                <Container fluid className="px-0">
-                    <Slide {...ssOne}>
+                <Container fluid>
+                    <OwlCarousel className="clients-slide-one" 
+                    items={10} 
+                    loop margin={30}
+                    autoplay={true}
+                    smartSpeed={1000}
+                    autoplayTimeout={3000}
+                    autoplayHoverPause={true}
+                    dots={false} >
                         <div className="item">
                             <div className="clients-logo">
                                 <a href="#demo" className="text-decoration-none text-reset">
@@ -138,10 +121,17 @@ export default function Clients() {
                                 </a>
                             </div>
                         </div>
-                    </Slide>
-
-                    {/* slide two start */}
-                    <Slide {...ssTwo} className="slide-rtl">
+                    </OwlCarousel>
+                    <OwlCarousel className="clients-slide-two" 
+                    items={10} 
+                    loop={true}
+                    margin={30}
+                    autoplay={true}
+                    smartSpeed={1000}
+                    autoplayTimeout={3000}
+                    autoplayHoverPause={true}
+                    dots={false}
+                    rtl={true}>
                         <div className="item">
                             <div className="clients-logo">
                                 <a href="#demo" className="text-decoration-none text-reset">
@@ -226,10 +216,15 @@ export default function Clients() {
                                 </a>
                             </div>
                         </div>
-                    </Slide>
-                    
-                    {/* slide three start */}
-                    <Slide {...ssThree}>
+                    </OwlCarousel>
+                    <OwlCarousel className="clients-slide-three" 
+                    items={10} 
+                    loop margin={30}
+                    autoplay={true}
+                    smartSpeed={1000}
+                    autoplayTimeout={3000}
+                    autoplayHoverPause={true}
+                    dots={false} >
                         <div className="item">
                             <div className="clients-logo">
                                 <a href="#demo" className="text-decoration-none text-reset">
@@ -314,7 +309,7 @@ export default function Clients() {
                                 </a>
                             </div>
                         </div>
-                    </Slide>
+                    </OwlCarousel>
                 </Container>
             </section>
         </>

@@ -15,7 +15,6 @@ export default function Content() {
     const [push, setPush] = useState(true)
 
     useEffect(() => {
-
         setNav1(slider1);
         setNav2(slider2);
 
