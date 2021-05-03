@@ -2,23 +2,28 @@
 @import "buttons";
 
 .fade {
-    transition: opacity 1s ease-in-out;
+    transition: opacity 1.5s ease-in-out;
+    // transition: opacity 1s cubic-bezier(0.78, 0.01, 0.3, 1.07);
 }
+
+
 // protfolio or tab content section start
 .protfolio-section {
     position: relative;
     overflow: hidden;
+    // height: 100vh;
     .tab-wrapper {
         position: relative;
+        height: 100vh;
     }
 
     .rotate {
         position: absolute;
-        top: 252px;
-        left: -248px;
+        top: 310px;
+        left: -306px;
         right: 0;
         transform: rotate(-90deg);
-        width: 554px;
+        width: 668px;
         border-bottom: 0;
         z-index: 1;
         &.nav {
@@ -30,6 +35,7 @@
         font-weight: 600;
         line-height: 32px;
         color: rgba($white, .30);
+        padding: 0.5rem 2rem;
     }
     .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
         color: $black;
@@ -51,10 +57,13 @@
 
 .profile-content-section {
     min-height: 570px;
+    // height: 100vh;
     .profile-content-wrapper {
         display: flex;
         flex-wrap: wrap;
+        height: 100vh;
         .profile-content-inner {
+            // height: 100vh;
             &.first-box {
                 flex: 0 0 3.9%;
                 max-width: 3.9%;
@@ -108,6 +117,7 @@
                 border-left: 1px solid $off-black;
                 .slick-slider-wrapper {
                     position: relative;
+                    height: 100vh;
                     .slick-slider {
                         .slick-prev {
                             left: 24px;
@@ -134,6 +144,7 @@
                             .slick-slide-image {
                                 position: relative;
                                 width: 100%;
+                                height: 100vh;
                             }
                             .web-visit-box {
                                 position: absolute;
@@ -180,9 +191,10 @@
                             .slick-slide-content {
                                 padding: 1rem 0;
                                 overflow: hidden;
-                                img {
+                                .slick-slide-image {
                                     border-radius: 4px;
                                     cursor: pointer;
+                                    height: auto;
                                 }
                             }
                             &.slick-current {
@@ -287,10 +299,10 @@
     // protfolio or tab content section start
     .protfolio-section {
         .rotate {
-            top: 382px;
-            left: -376px;
+            top: 465px;
+            left: -459px;
             right: 0;
-            width: 812px;
+            width: 978px;
         }  
     }
 
@@ -303,12 +315,15 @@
                     max-width: 2.9%;
                 }
                 &.second-box {
-                    flex: 0 0 21.1%;
-                    max-width: 21.1%;
+                    flex: 0 0 19.1%;
+                    max-width: 19.1%;
                 }
                 &.third-box {
-                    flex: 0 0 76%;
-                    max-width: 76%;
+                    flex: 0 0 78%;
+                    max-width: 78%;
+                }
+                .profile-left-box {
+                    padding: 208px 48px 48px;
                 }
             }
         } 

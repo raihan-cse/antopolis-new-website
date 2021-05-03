@@ -120,9 +120,7 @@ export default function Content() {
         <>
             <section className="profile-content-section">
                 <div className="profile-content-wrapper black">
-                    <div className="profile-content-inner first-box">
-                        {/* <div style={{width: "200px"}}></div> */}
-                    </div>
+                    <div className="profile-content-inner first-box"></div>
 
                     <div className="profile-content-inner second-box">
                         <div className="profile-left-box">
