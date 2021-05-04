@@ -167,9 +167,16 @@ ol, ul, dl {
                 color: $black;
             }
         }
+        .exp-plus {
+            padding: 0 .75rem;
+            margin-top: -0.75rem;
+            img {
+                width: 32px;
+            }
+        }
         .text {
             flex-basis: 50%;
-            padding-left: 1rem;
+            // padding-left: 1rem;
             p {
                 font-size: 22px;
                 font-weight: 500;
