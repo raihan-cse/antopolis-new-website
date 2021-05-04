@@ -3,30 +3,20 @@
 
 @mixin view-all () {
     a {
-        font-size: 20px;
-        font-weight: 700;
-        line-height: 24px;
-        text-transform: uppercase;
-        color: $black;
-        vertical-align: middle;
-        position: relative;
-        // background-image: url('https://via.placeholder.com/500');
-        // background-image: url('../images/angle-right.svg');
-        // background-repeat: no-repeat;
-        // background-size: 28px;
-        // background-position: center 100px;
-        img {
-            width: 28px;
-            // height: 20px;
-            margin-left: 16px;
-            margin-top: -2px;
-            // vertical-align: top;
+        font-size: 0;
+        span {
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 24px; 
+            text-transform: uppercase;
+            color: $black;
+            vertical-align: middle;
+            img {
+                width: 24px;
+                margin-left: 16px;
+                margin-top: -2px;
+            }
         }
-        // &::before {
-        //     position: absolute;
-        //     content: url('../images/angle-right.svg');
-        //     top: 2px;
-        //     right: -42px;
-        // }
+        
     }
 }

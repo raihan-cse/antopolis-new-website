@@ -3,7 +3,6 @@
 
 .fade {
     transition: opacity 1.5s ease-in-out;
-    // transition: opacity 1s cubic-bezier(0.78, 0.01, 0.3, 1.07);
 }
 
 
@@ -11,7 +10,6 @@
 .protfolio-section {
     position: relative;
     overflow: hidden;
-    // height: 100vh;
     .tab-wrapper {
         position: relative;
         height: 100vh;
@@ -57,13 +55,11 @@
 
 .profile-content-section {
     min-height: 570px;
-    // height: 100vh;
     .profile-content-wrapper {
         display: flex;
         flex-wrap: wrap;
         height: 100vh;
         .profile-content-inner {
-            // height: 100vh;
             &.first-box {
                 flex: 0 0 3.9%;
                 max-width: 3.9%;
@@ -133,14 +129,13 @@
                         }
                         .slick-prev, .slick-next {
                             z-index: 1;
-                            width: 48px;
-                            height: 48px;
-                            border: 2px solid $off-white !important;
+                            width: 62px;
+                            height: 62px;
+                            border: 2px solid $off-black;
                             border-radius: 50%;
                         }
                         .slick-slide-content {
                             position: relative;
-                            // min-height: 695px;
                             .slick-slide-image {
                                 position: relative;
                                 width: 100%;
@@ -155,11 +150,11 @@
                                 border-radius: 50px;
                                 text-align: center;
                                 height: 70px;
-                                line-height: 70px;
+                                line-height: 62px;
                                 @include view-all();
                                 a {
-                                    color: $white;
-                                    img {
+                                    span {
+                                        color: $white;
                                         display: inline-block;
                                     }
                                 }
@@ -201,7 +196,6 @@
                                 .slick-slide-content {
                                     border-top: 2px solid $black;
                                 }
-                                
                             }  
                         }
                     }
@@ -236,7 +230,9 @@
                     .full-profile {
                         @include view-all();
                         a {
-                            color: $white;
+                            span {
+                                color: $white;
+                            }
                         }
                     }
                 }
@@ -264,7 +260,9 @@
                                     background-color: #404040;
                                     @include view-all();
                                     a {
-                                        color: $white;
+                                        span {
+                                            color: $white;
+                                        }
                                     }
                                 }
                             }
@@ -296,7 +294,6 @@
 @media (min-width: 1366px) and (max-width: 1919.98px) {}    
 
 @media (min-width: 1920px) {
-    // protfolio or tab content section start
     .protfolio-section {
         .rotate {
             top: 465px;

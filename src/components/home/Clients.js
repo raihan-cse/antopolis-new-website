@@ -43,10 +43,12 @@ export default function Clients() {
                                     <h1 className="sc-title">Clients we’ve worked with</h1>
                                 </div>
                                 <div className="sc-view-all-box">
-                                    <a className="sc-view-all" href="#demo">VIEW all clients</a>
-                                    <span>
-                                        <img src={AngleRight} alt="angle-right" />
-                                    </span>
+                                    <a className="sc-view-all" href="#demo">
+                                        <span>VIEW all clients</span>
+                                        <span>
+                                            <img src={AngleRight} alt="angle-right" />
+                                        </span>
+                                    </a>
                                 </div>
                             </div>
                         </Col>

@@ -6,14 +6,14 @@ import VisibilitySensor from 'react-visibility-sensor'
 export default function AnimatedCount() {
     return (
         <>
-            <section className="animated-count-section spy-50">
+            <section className="animated-count-section spy-75">
                 <Container>
                     <Row>
                         <Col xs={12} md={4}>
                             <div className="counter-wrapper left">
                                 <div className="number">
                                     <h1>
-                                        <CountUp start={0} end={8} delay={0}>
+                                        <CountUp start={0} end={8} delay={0} redraw={true}>
                                             {({ countUpRef, start }) => (
                                                 <VisibilitySensor onChange={start} delayedCall>
                                                     <span ref={countUpRef} />
@@ -31,7 +31,7 @@ export default function AnimatedCount() {
                             <div className="counter-wrapper mid">
                                 <div className="number">
                                     <h1>
-                                        <CountUp start={0} end={271} delay={0}>
+                                        <CountUp start={0} end={271} delay={0} redraw={true}>
                                             {({ countUpRef, start }) => (
                                                 <VisibilitySensor onChange={start} delayedCall>
                                                     <span ref={countUpRef} />
@@ -49,7 +49,7 @@ export default function AnimatedCount() {
                             <div className="counter-wrapper right">
                                 <div className="number">
                                     <h1>
-                                        <CountUp start={0} end={95} delay={0}>
+                                        <CountUp start={0} end={95} delay={0} redraw={true}>
                                             {({ countUpRef, start }) => (
                                                 <VisibilitySensor onChange={start} delayedCall>
                                                     <span ref={countUpRef} />

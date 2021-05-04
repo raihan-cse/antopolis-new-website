@@ -17,10 +17,12 @@ export default function DigitalExperience() {
                                     <h1 className="sc-title">We create next-level digital experiences</h1>
                                 </div>
                                 <div className="sc-view-all-box">
-                                    <a className="sc-view-all" href="#demo">VIEW OUR SERVICES</a>
-                                    <span>
-                                        <img src={AngleRight} alt="angle-right" />
-                                    </span>
+                                    <a className="sc-view-all" href="#demo">
+                                        <span>VIEW OUR SERVICES</span>
+                                        <span>
+                                            <img src={AngleRight} alt="angle-right" />
+                                        </span>
+                                    </a>
                                 </div>
                             </div>
                         </Col>

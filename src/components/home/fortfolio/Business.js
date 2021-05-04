@@ -162,8 +162,10 @@ export default function Content() {
                             </div>
                             <div className="full-profile">
                                 <a href="#demo">
-                                    full profile
-                                            <img src={process.env.PUBLIC_URL + '/assets/img/angle-right-white.svg'} alt="angle-right-white" />
+                                    <span>full profile</span>
+                                    <span>
+                                    <img src={process.env.PUBLIC_URL + '/assets/img/angle-right-white.svg'} alt="angle-right-white" />
+                                    </span>       
                                 </a>
                             </div>
                         </div>
@@ -183,13 +185,13 @@ export default function Content() {
                                             <img className="slick-slide-image" src={slide.imgUrl} alt={slide.imgAlt} />
                                             <div className="web-visit-box">
                                                 <a href="#demo">
-                                                    visit website
+                                                    <span>visit website</span>
+                                                    <span>
                                                         <img src={process.env.PUBLIC_URL + '/assets/img/angle-right-white.svg'} alt="angle-right-white" />
+                                                    </span>
                                                 </a>
                                             </div>
-
                                         </div>
-
                                     )}
 
                                 </SlickSlider>

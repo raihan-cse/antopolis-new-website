@@ -1,6 +1,5 @@
 import './App.scss';
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom'
-// import Routing from './Routing'
 import Footer from './components/footer/Footer'
 import Home from './components/home/Home';
 import Notfound from './components/pages/Notfound';

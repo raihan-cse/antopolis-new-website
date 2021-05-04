@@ -4,7 +4,7 @@ import { Col, Container, Row } from 'react-bootstrap'
 export default function GreatTogether() {
     return (
         <>
-            <section className="great-together-section spy-100">
+            <section className="great-together-section spy-125">
                 <Container>
                     <Row>
                         <Col xs={12} md={8}>
@@ -15,10 +15,15 @@ export default function GreatTogether() {
                         </Col>
                         <Col xs={12} md={4}>
                             <div className="great-together-wrapper">
-                                <div className="get-quote-box">
-                                    <a href="#demo">GET A QUOTE
-                                    <img src={process.env.PUBLIC_URL + '/assets/img/angle-right-white.svg'} alt="right-angle-white" />
-                                    </a>
+                                <div className="get-quote-wrapper">
+                                    <div className="get-quote-box">
+                                        <a href="#demo">
+                                            <span>GET A QUOTE</span>
+                                            <span>
+                                            <img src={process.env.PUBLIC_URL + '/assets/img/angle-right-white.svg'} alt="right-angle-white" />
+                                            </span>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </Col>

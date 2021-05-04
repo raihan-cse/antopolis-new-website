@@ -120,11 +120,7 @@ export default function Content() {
         <>
             <section className="profile-content-section">
                 <div className="profile-content-wrapper">
-                    <div className="profile-content-inner first-box">
-                        {/* <div style={{width: "200px"}}></div> */}
-                    </div>
-
-                    
+                    <div className="profile-content-inner first-box"></div>
 
                     <div className="profile-content-inner third-box">
                         <div className="profile-right-box">
@@ -140,8 +136,10 @@ export default function Content() {
                                             <img className="slick-slide-image" src={slide.imgUrl} alt={slide.imgAlt} />
                                             <div className="web-visit-box">
                                                 <a href="#demo">
-                                                    visit website
-                                                        <img src={process.env.PUBLIC_URL + '/assets/img/angle-right-white.svg'} alt="angle-right-white" />
+                                                    <span>visit website</span>
+                                                    <span>
+                                                    <img src={process.env.PUBLIC_URL + '/assets/img/angle-right-white.svg'} alt="angle-right-white" />
+                                                    </span>   
                                                 </a>
                                             </div>
 
@@ -220,8 +218,10 @@ export default function Content() {
                             </div>
                             <div className="full-profile">
                                 <a href="#demo">
-                                    full profile
-                                            <img src={process.env.PUBLIC_URL + '/assets/img/angle-right-black.svg'} alt="angle-right-white" />
+                                    <span>full profile</span>
+                                    <span>
+                                        <img src={process.env.PUBLIC_URL + '/assets/img/angle-right-black.svg'} alt="angle-right-white" />
+                                    </span>
                                 </a>
                             </div>
                         </div>
