@@ -1,6 +1,7 @@
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import CountUp from 'react-countup'
+import VisibilitySensor from 'react-visibility-sensor'
 
 export default function AnimatedCount() {
     return (
@@ -13,10 +14,10 @@ export default function AnimatedCount() {
                                 <div className="number">
                                     <h1>
                                         <CountUp start={0} end={8} delay={0}>
-                                            {({ countUpRef }) => (
-                                                <div>
+                                            {({ countUpRef, start }) => (
+                                                <VisibilitySensor onChange={start} delayedCall>
                                                     <span ref={countUpRef} />
-                                                </div>
+                                                </VisibilitySensor>
                                             )}
                                         </CountUp>
                                     </h1>
@@ -31,10 +32,10 @@ export default function AnimatedCount() {
                                 <div className="number">
                                     <h1>
                                         <CountUp start={0} end={271} delay={0}>
-                                            {({ countUpRef }) => (
-                                                <div>
+                                            {({ countUpRef, start }) => (
+                                                <VisibilitySensor onChange={start} delayedCall>
                                                     <span ref={countUpRef} />
-                                                </div>
+                                                </VisibilitySensor>
                                             )}
                                         </CountUp>
                                     </h1>
@@ -49,10 +50,10 @@ export default function AnimatedCount() {
                                 <div className="number">
                                     <h1>
                                         <CountUp start={0} end={95} delay={0}>
-                                            {({ countUpRef }) => (
-                                                <div>
+                                            {({ countUpRef, start }) => (
+                                                <VisibilitySensor onChange={start} delayedCall>
                                                     <span ref={countUpRef} />
-                                                </div>
+                                                </VisibilitySensor>
                                             )}
                                         </CountUp>
                                     </h1>
