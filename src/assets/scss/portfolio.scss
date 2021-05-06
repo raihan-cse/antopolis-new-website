@@ -1,10 +1,10 @@
 @import "colors";
 @import "buttons";
 
+
 .fade {
     transition: opacity 1.5s ease-in-out;
 }
-
 
 // protfolio or tab content section start
 .protfolio-section {
@@ -13,44 +13,62 @@
     .tab-wrapper {
         position: relative;
         height: 100vh;
-    }
-
-    .rotate {
-        position: absolute;
-        top: 310px;
-        left: -306px;
-        right: 0;
-        transform: rotate(-90deg);
-        width: 668px;
-        border-bottom: 0;
-        z-index: 1;
-        &.nav {
-            justify-content: center;
+        .rotate {
+            position: absolute;
+            top: 310px;
+            left: -306px;
+            right: 0;
+            transform: rotate(-90deg);
+            width: 668px;
+            border-bottom: 0;
+            z-index: 1;
+            &.nav {
+                justify-content: center;
+            }
         }
-    }
-    .nav-tabs .nav-link {
-        font-size: 20px;
-        font-weight: 600;
-        line-height: 32px;
-        color: rgba($white, .30);
-        padding: 0.5rem 2rem;
-    }
-    .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
-        color: $black;
-        background-color: transparent;
-        border: none;
-        border-bottom: 2px solid $black;
-    }
-    .nav-tabs .bgs-tab.nav-link.active, .nav-tabs .bgs-tab.nav-item.show .nav-link {
-        color: $white;
-        background-color: transparent;
-        border: none;
-        border-bottom: 2px solid $white;
-    }
-    .nav-tabs .bgs-tab.ad.nav-link {
-        color: rgba($black, .30);
-    }
-    
+        .nav-tabs .nav-link {
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 32px;
+            color: rgba($white, .30);
+            padding: 0.5rem 2rem;
+        }
+        .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+            color: $black;
+            background-color: transparent;
+            border: none;
+            border-bottom: 2px solid $black;
+        }
+        .nav-tabs .bgs-tab.nav-link.active, .nav-tabs .bgs-tab.nav-item.show .nav-link {
+            color: $white;
+            background-color: transparent;
+            border: none;
+            border-bottom: 2px solid $white;
+        }
+        .nav-tabs .bgs-tab.ad.nav-link {
+            color: rgba($black, .30);
+        }
+
+        // .tab-content .tab-pane .first-box-inner::before {
+        //     position: absolute;
+        //     content: '';
+        //     background-color: $white;
+        //     height: 120px;
+        //     width: 2px;
+        //     right: 0;
+        //     transition: all 1.5s ease-in-out;
+        // }
+        // .tab-content .tab-pane.content.active .first-box-inner::before {
+        //     top: 558px;
+        // }
+        // .tab-content .tab-pane.tech.active .first-box-inner::before {
+        //     top: 428px;
+        //     background-color: $black;
+        // }
+        // .tab-content .tab-pane.business.active .first-box-inner::before {
+        //     top: 308px;
+        // }
+    }   
 }
 
 .profile-content-section {
@@ -63,6 +81,10 @@
             &.first-box {
                 flex: 0 0 3.9%;
                 max-width: 3.9%;
+                .first-box-inner {
+                    position: relative;
+                    height: 100%;
+                }
             }
             &.second-box {
                 flex: 0 0 21.1%;
@@ -79,13 +101,14 @@
                 height: 100%;
                 padding: 32px 24px;
                 border-left: 1px solid $off-black;
+                // position: relative;
                 .profile-left-contet {
                     width: 100%;
                     h3 {
                         font-size: 32px;
                         font-weight: 700;
                         line-height: 44px;
-                        padding-bottom: 1.5rem;
+                        padding-bottom: 3rem;
                     }
                     ul > li {
                         display: flex;
@@ -136,10 +159,12 @@
                         }
                         .slick-slide-content {
                             position: relative;
+                            height: calc(100vh - 98px);
                             .slick-slide-image {
                                 position: relative;
                                 width: 100%;
-                                height: 100vh;
+                                // height: 100vh;
+                                height: calc(100vh - 98px);
                             }
                             .web-visit-box {
                                 position: absolute;
@@ -184,8 +209,9 @@
                         .slick-slide {
                             padding: 0 .5rem;
                             .slick-slide-content {
-                                padding: 1rem 0;
+                                padding: 1.5rem 0 1rem;
                                 overflow: hidden;
+                                height: auto;
                                 .slick-slide-image {
                                     border-radius: 4px;
                                     cursor: pointer;
@@ -295,11 +321,18 @@
 
 @media (min-width: 1920px) {
     .protfolio-section {
-        .rotate {
-            top: 465px;
-            left: -459px;
-            right: 0;
-            width: 978px;
+        .tab-wrapper {
+            .rotate {
+                top: 465px;
+                left: -450px;
+                right: 0;
+                width: 978px;
+            }
+            .nav-tabs {
+                .nav-link {
+                    padding: 0.75rem 4rem;
+                }
+            }
         }  
     }
 
@@ -308,19 +341,31 @@
         .profile-content-wrapper {
             .profile-content-inner {
                 &.first-box {
-                    flex: 0 0 2.9%;
-                    max-width: 2.9%;
+                    flex: 0 0 3.5%;
+                    max-width: 3.5%;
                 }
                 &.second-box {
-                    flex: 0 0 19.1%;
-                    max-width: 19.1%;
+                    flex: 0 0 19%;
+                    max-width: 19%;
                 }
                 &.third-box {
-                    flex: 0 0 78%;
-                    max-width: 78%;
+                    flex: 0 0 77.5%;
+                    max-width: 77.5%;
                 }
                 .profile-left-box {
                     padding: 208px 48px 48px;
+                }
+                .profile-right-box {
+                    .slick-slider-wrapper {
+                        .slick-slider {
+                            .slick-slide-content {
+                                height: calc(100vh - 126px);
+                                .slick-slide-image {
+                                    height: calc(100vh - 126px);
+                                }
+                            }
+                        }
+                    }
                 }
             }
         } 

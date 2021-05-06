@@ -1,0 +1,69 @@
+@import "colors";
+@import "buttons";
+
+@media (max-width: 359.98px) {}
+
+@media (min-width: 1920px) {
+    .container {
+        max-width: 100%;
+        padding: 0 248px;
+    }
+
+    // digital experience section start
+    .section-title-wrapper {
+        .sc-title-box {
+            flex-basis: 40%;
+        }
+    }
+
+    .de-content-wrapper {
+        padding: 0;
+        max-width: 350px;
+        .info-box {
+            .title {
+                max-width: 278px;
+            }
+        }
+    }
+
+
+    // clients section start 
+    .home-clients-section {
+        .section-title-wrapper {
+            .sc-title-box {
+                flex-basis: 70%;
+            }
+        }
+        // .slide-rtl {
+        //     padding: 64px 0;
+        // }
+        .clients-logo {
+            text-align: center;
+            a {
+                img {
+                    width: 121px;  
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+
+    // animated count section start
+    .animated-count-section {
+        .counter-wrapper {
+            .text {
+                flex-basis: 25%;
+            }
+        }
+    }
+
+
+    // great together section start
+    .great-together-section {
+        .great-together-wrapper {
+            .content-wrapper {
+                max-width: 692px;
+            }
+        }
+    } 
+}

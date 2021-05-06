@@ -22,9 +22,14 @@ export default function AnimatedCount() {
                                         </CountUp>
                                     </h1>
                                 </div>
-                                <div className="exp-plus">
-                                    <img src={process.env.PUBLIC_URL + '/assets/img/plus-bold.svg'} alt="plus icon" />
+                                <div className="number pl -1 pr-2">
+                                    <h1>
+                                        <span>+</span>
+                                    </h1>
                                 </div>
+                                {/* <div className="exp-plus">
+                                    <img src={process.env.PUBLIC_URL + '/assets/img/plus-bold.svg'} alt="plus icon" />
+                                </div> */}
                                 <div className="text">
                                     <p>YEARS OF EXPERIENCE</p>
                                 </div>
@@ -43,9 +48,14 @@ export default function AnimatedCount() {
                                         </CountUp>
                                     </h1>
                                 </div>
-                                <div className="exp-plus">
-                                    <img src={process.env.PUBLIC_URL + '/assets/img/plus-bold.svg'} alt="plus icon" />
+                                <div className="number">
+                                    <h1>
+                                        <span>+</span>
+                                    </h1>
                                 </div>
+                                {/* <div className="exp-plus">
+                                    <img src={process.env.PUBLIC_URL + '/assets/img/plus-bold.svg'} alt="plus icon" />
+                                </div> */}
                                 <div className="text">
                                     <p>SUCCESSFUL PROJECTS</p>
                                 </div>
@@ -64,11 +74,16 @@ export default function AnimatedCount() {
                                         </CountUp>
                                     </h1>
                                 </div>
-                                <div className="exp-plus">
-                                    <img src={process.env.PUBLIC_URL + '/assets/img/plus-bold.svg'} alt="plus icon" />
+                                <div className="number">
+                                    <h1>
+                                        <span>+</span>
+                                    </h1>
                                 </div>
+                                {/* <div className="exp-plus">
+                                    <img src={process.env.PUBLIC_URL + '/assets/img/plus-bold.svg'} alt="plus icon" />
+                                </div> */}
                                 <div className="text">
-                                    <p>SATISFIED CLIENTS</p>
+                                    <p>SATISFIED <br /> CLIENTS</p>
                                 </div>
                             </div>
                         </Col>

@@ -8,9 +8,11 @@ export default function GreatTogether() {
                 <Container>
                     <Row>
                         <Col xs={12} md={8}>
-                            <div className="great-together-wrapper">
-                                <h1>Let’s create something great together!</h1>
-                                <p>Drop us a line, and we'll get in touch. We'll see if we're a match and how we can help each other.</p>
+                            <div className="great-together-wrapper ">
+                                <div className="content-wrapper">
+                                    <h1>Let’s create something great together!</h1>
+                                    <p>Drop us a line, and we'll get in touch. We'll see if we're a match and how we can help each other.</p>
+                                </div>
                             </div>
                         </Col>
                         <Col xs={12} md={4}>

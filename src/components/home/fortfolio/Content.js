@@ -34,7 +34,7 @@ export default function Content() {
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: true,
-        fade: false,
+        fade: true,
         autoplay: true,
         pauseOnHover: false,
         autoplaySpeed: 5000,
@@ -120,7 +120,9 @@ export default function Content() {
         <>
             <section className="profile-content-section">
                 <div className="profile-content-wrapper black">
-                    <div className="profile-content-inner first-box"></div>
+                    <div className="profile-content-inner first-box">
+                    <div className="first-box-inner"></div>
+                    </div>
 
                     <div className="profile-content-inner second-box">
                         <div className="profile-left-box">

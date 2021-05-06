@@ -165,6 +165,13 @@ ol, ul, dl {
                 font-weight: 700;
                 line-height: 87px;
                 color: $black;
+                span {
+                    font-family: 'inter', sans-serif;
+                }
+            }
+            &:not(:first-child) {
+                padding: 0 .5rem 0 .25rem;
+                margin-top: -.75rem;
             }
         }
         .exp-plus {
@@ -175,8 +182,7 @@ ol, ul, dl {
             }
         }
         .text {
-            flex-basis: 50%;
-            // padding-left: 1rem;
+            flex-basis: 32%;
             p {
                 font-size: 22px;
                 font-weight: 500;
@@ -198,18 +204,20 @@ ol, ul, dl {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        h1 {
-            font-size: 62px;
-            font-weight: 700;
-            line-height: 82px;
-            color: $white;
-            padding-bottom: 3rem;
-        }
-        p {
-            font-size: 24px;
-            font-weight: 500;
-            line-height: 42px;
-            color: $white;
+        .content-wrapper {
+            h1 {
+                font-size: 62px;
+                font-weight: 700;
+                line-height: 82px;
+                color: $white;
+                padding-bottom: 3rem;
+            }
+            p {
+                font-size: 24px;
+                font-weight: 500;
+                line-height: 42px;
+                color: $white;
+            }
         }
         .get-quote-wrapper {
             height: 100%;
@@ -309,7 +317,7 @@ ol, ul, dl {
     }
 
     .copyright {
-        padding-top: 28px;
+        padding: 28px 0;
         border-top: 2px solid $light-gray;
         display: flex;
         justify-content: center;

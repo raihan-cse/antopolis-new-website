@@ -40,7 +40,7 @@ export default function DigitalExperience() {
                             </div>
                         </Col>
                         <Col md={4}>
-                            <div className="de-content-wrapper">
+                            <div className="de-content-wrapper mx-auto">
                                 <div className="img-box">
                                     <img className="img-fluid"  src={Content} alt="Business Services" />
                                 </div>
@@ -51,7 +51,7 @@ export default function DigitalExperience() {
                             </div>
                         </Col>
                         <Col md={4}>
-                            <div className="de-content-wrapper">
+                            <div className="de-content-wrapper ml-auto">
                                 <div className="img-box">
                                     <img className="img-fluid" src={Tech} alt="Business Services" />
                                 </div>

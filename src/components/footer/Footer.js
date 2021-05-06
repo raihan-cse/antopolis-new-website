@@ -4,7 +4,7 @@ import { Col, Container, Row } from 'react-bootstrap'
 export default function Footer() {
     return (
         <>
-            <footer className="footer spt-100 spb-50">
+            <footer className="footer spt-100">
                 <Container>
                     <div className="footer-main">
                         <Row>

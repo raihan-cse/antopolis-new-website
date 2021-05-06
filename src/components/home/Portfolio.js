@@ -21,13 +21,13 @@ export default function Portfolio() {
             <section className="protfolio-section spb-100">
                 <div className="tab-wrapper">
                     <Tabs className="rotate" defaultActiveKey="business" id="portfolio-tab" onSelect={handleSelect}>
-                        <Tab eventKey="content" title="Content" tabClassName={`bgs-tab ${adc}`}>
+                        <Tab eventKey="content" title="Content" tabClassName={`bgs-tab ${adc}`} className="content">
                             <Content />
                         </Tab>
-                        <Tab eventKey="tech" title="Tech" tabClassName={``}>
+                        <Tab eventKey="tech" title="Tech" tabClassName={``} className="tech">
                             <Tech />
                         </Tab>
-                        <Tab eventKey="business" title="Business" tabClassName={`bgs-tab ${adc}`}>
+                        <Tab eventKey="business" title="Business" tabClassName={`bgs-tab ${adc}`} className="business">
                             <Business />
                         </Tab>
                     </Tabs>

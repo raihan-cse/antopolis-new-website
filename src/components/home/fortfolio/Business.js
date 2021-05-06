@@ -33,7 +33,7 @@ export default function Content() {
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: true,
-        fade: false,
+        fade: true,
         autoplay: true,
         pauseOnHover: false,
         autoplaySpeed: 5000,
@@ -45,7 +45,7 @@ export default function Content() {
         slidesToScroll: 1,
         dots: false,
         centerMode: true,
-        swipeToSlide: false,
+        swipeToSlide: true,
         focusOnSelect: true,
     };
 
@@ -59,7 +59,7 @@ export default function Content() {
         },
         {
             id: 2,
-            imgUrl: '/assets/img/media/media-black.png',
+            imgUrl: '/assets/img/media/media-white.png',
             title: 'excepturi consequatur est',
             label: 'Officia non provident dolor esse et neque.',
             imgAlt: 'second'
@@ -73,7 +73,7 @@ export default function Content() {
         },
         {
             id: 4,
-            imgUrl: '/assets/img/media/media-black.png',
+            imgUrl: '/assets/img/media/media-white.png',
             title: 'nihil voluptates delectus',
             label: 'Qui vel consequatur recusandae illo repellendus.',
             imgAlt: 'fouth'
@@ -119,7 +119,9 @@ export default function Content() {
         <>
             <section className="profile-content-section">
                 <div className="profile-content-wrapper black">
-                    <div className="profile-content-inner first-box"></div>
+                    <div className="profile-content-inner first-box">
+                        <div className="first-box-inner"></div>
+                    </div>
 
                     <div className="profile-content-inner second-box">
                         <div className="profile-left-box">
